@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#061716" />
+  <meta name="description" content="Rumblekin VR is a playful physics-destruction game in development for Meta Quest." />
+  <meta property="og:title" content="Rumblekin VR — The city is your playground" />
+  <meta property="og:description" content="Run, climb, smash, topple, and grow in a reactive city built for Meta Quest." />
+  <meta property="og:image" content="assets/images/og-rumblekin-v1.webp" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rumblekin VR — The city is your playground" />
+  <meta name="twitter:description" content="Run, climb, smash, topple, and grow in a reactive city built for Meta Quest." />
+  <meta name="twitter:image" content="assets/images/og-rumblekin-v1.webp" />
+  <title>Rumblekin VR — The city is your playground</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/translations.js" defer></script>
+  <script src="assets/script.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#game" data-i18n="common.skip">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="wordmark" href="#top" aria-label="Rumblekin VR home" data-i18n-aria="common.homeAria">
+      <img src="assets/images/rumblekin-logo-v1.webp" width="2048" height="768" alt="Rumblekin VR" />
+    </a>
+    <nav aria-label="Main navigation" data-i18n-aria="nav.aria">
+      <a href="#game" data-i18n="nav.game">The game</a>
+      <a href="#growth" data-i18n="nav.growth">Growth</a>
+      <a href="#impact" data-i18n="nav.impact">Impact</a>
+      <a href="#quest" data-i18n="nav.quest">Meta Quest</a>
+      <a class="nav-privacy" href="privacy/" data-language-link data-i18n="nav.privacy">Privacy</a>
+      <div class="language-picker">
+        <span aria-hidden="true">🌐</span>
+        <label class="sr-only" for="language-home" data-i18n="language.label">Language</label>
+        <select id="language-home" data-language-selector aria-label="Language" data-i18n-aria="language.label">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="zh-CN">简体中文</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" data-depth="0.055">
+        <picture><source media="(max-width: 700px)" srcset="assets/images/hero-v1-mobile.webp" /><img src="assets/images/hero-v1.webp" width="1920" height="1080" alt="A giant green cartoon monster rampaging through a colorful city" data-i18n-alt="hero.alt" /></picture>
+      </div>
+      <div class="hero-wash"></div>
+      <div class="hero-content">
+        <p class="kicker reveal"><span></span><b data-i18n="hero.kicker">In development for Meta Quest</b></p>
+        <h1 class="display reveal" id="hero-title" data-i18n-html="hero.title">The city is your<br /><em>playground.</em></h1>
+        <p class="hero-copy reveal" data-i18n="hero.copy">Run with your arms, climb facades, rip loose anything that is anchored, and turn every impact into a chain reaction.</p>
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="#game"><span data-i18n="hero.ctaGame">Discover the game</span> <span aria-hidden="true">↓</span></a>
+          <a class="button button-ghost" href="privacy/" data-language-link data-i18n="hero.ctaPrivacy">Privacy policy</a>
+        </div>
+      </div>
+      <div class="hero-meta" aria-label="Game features" data-i18n-aria="hero.featuresAria">
+        <span data-i18n="hero.meta1">VR first-person</span><span data-i18n="hero.meta2">Physics-based destruction</span><span data-i18n="hero.meta3">Single-player</span>
+      </div>
+      <p class="concept-note" data-i18n="hero.note">V1 concept art — game visuals are in development.</p>
+    </section>
+
+    <div class="smash-strip" aria-hidden="true"><div data-i18n-html="strip.text">Run <i>✦</i> Climb <i>✦</i> Rip <i>✦</i> Throw <i>✦</i> Topple <i>✦</i> Grow <i>✦</i> Run <i>✦</i> Climb <i>✦</i> Rip <i>✦</i> Throw <i>✦</i> Topple <i>✦</i> Grow <i>✦</i></div></div>
+
+    <section class="section manifesto" id="game">
+      <div class="section-inner">
+        <div class="manifesto-grid">
+          <div>
+            <p class="eyebrow reveal" data-i18n="manifesto.eyebrow">Everything reacts</p>
+            <h2 class="display reveal" data-i18n-html="manifesto.title">Do not watch<br />the chaos.<br /><em>Cause it.</em></h2>
+          </div>
+          <div class="manifesto-copy reveal">
+            <p class="lead" data-i18n="manifesto.lead">Rumblekin VR turns a city into a physical playground where size, momentum, and curiosity decide what happens next.</p>
+            <p data-i18n="manifesto.body">Every wall is a possibility. Every object can become a tool. Every crash can begin a bigger collapse.</p>
+          </div>
+        </div>
+        <div class="principles">
+          <article class="principle reveal"><span>01</span><h3 data-i18n="principles.oneTitle">Touch and understand</h3><p data-i18n="principles.oneBody">Every contact answers through shape, sound, motion, and haptics.</p></article>
+          <article class="principle reveal"><span>02</span><h3 data-i18n="principles.twoTitle">Improvise freely</h3><p data-i18n="principles.twoBody">Grab the city, find unexpected tools, and make your own solution.</p></article>
+          <article class="principle reveal"><span>03</span><h3 data-i18n="principles.threeTitle">Master the collapse</h3><p data-i18n="principles.threeBody">Read supports, build momentum, and bring entire structures down.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section growth" id="growth">
+      <div class="section-inner growth-grid">
+        <div class="growth-copy">
+          <p class="eyebrow reveal" data-i18n="growth.eyebrow">Small. For now.</p>
+          <h2 class="display reveal" data-i18n-html="growth.title">Grow and change<br /><em>the rules.</em></h2>
+          <p class="reveal" data-i18n="growth.body">You begin close to the street. As the Rumblekin grows, obstacles become toys, routes open above the rooftops, and the city answers with bigger challenges.</p>
+          <ol class="growth-list reveal">
+            <li><span>01</span><strong data-i18n="growth.step1Title">Street scale</strong><span data-i18n="growth.step1Body">Climb, squeeze, and improvise.</span></li>
+            <li><span>02</span><strong data-i18n="growth.step2Title">Building scale</strong><span data-i18n="growth.step2Body">Rip, swing, and topple.</span></li>
+            <li><span>03</span><strong data-i18n="growth.step3Title">Monster scale</strong><span data-i18n="growth.step3Body">Reshape the whole skyline.</span></li>
+          </ol>
+        </div>
+        <figure class="growth-art reveal">
+          <img src="assets/images/growth-v1.webp" width="1600" height="900" loading="lazy" alt="Three growth stages of the Rumblekin monster" data-i18n-alt="growth.alt" />
+          <figcaption data-i18n="growth.caption">V1 growth concept — scale changes the way you play</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section city" id="impact">
+      <div class="city-scene">
+        <img class="city-layer city-sky" src="assets/images/city-v1.webp" width="1920" height="1080" alt="" data-depth="0.025" />
+        <img class="city-layer city-buildings" src="assets/images/city-v1.webp" width="1920" height="1080" alt="" data-depth="0.052" />
+        <img class="city-layer city-street" src="assets/images/city-v1.webp" width="1920" height="1080" alt="" data-depth="0.09" />
+      </div>
+      <div class="city-shade"></div>
+      <div class="section-inner city-content">
+        <p class="eyebrow reveal" data-i18n="city.eyebrow">The city is a system</p>
+        <h2 class="display reveal" data-i18n-html="city.title">Find the<br /><em>weak point.</em></h2>
+        <p class="reveal" data-i18n="city.body">Break the right support and the structure responds. Falling pieces strike what is below, opening a chain of physical consequences you can see, hear, and feel.</p>
+        <div class="impact-chain reveal"><span data-i18n="city.chain1">Impact</span><i>→</i><span data-i18n="city.chain2">Breach</span><i>→</i><span data-i18n="city.chain3">Collapse</span></div>
+      </div>
+    </section>
+
+    <section class="section mechanics">
+      <div class="section-inner">
+        <div class="mechanics-heading">
+          <div><p class="eyebrow reveal" data-i18n="mechanics.eyebrow">Your body is the controller</p><h2 class="display reveal" data-i18n-html="mechanics.title">Feel the city<br /><em>give way.</em></h2></div>
+          <p class="reveal" data-i18n="mechanics.body">Physical movement and readable feedback keep every action direct: push the ground to move, reach to climb, swing to strike, and use momentum to finish the job.</p>
+        </div>
+        <div class="mechanic-grid">
+          <article class="mechanic-card reveal"><div class="atlas-icon atlas-run" role="img" aria-label="Arm-powered movement" data-i18n-aria="mechanics.runAlt"></div><span>01</span><h3 data-i18n="mechanics.runTitle">Propel</h3><p data-i18n="mechanics.runBody">Push and swing your arms to move through the world.</p></article>
+          <article class="mechanic-card reveal"><div class="atlas-icon atlas-climb" role="img" aria-label="Climbing a building" data-i18n-aria="mechanics.climbAlt"></div><span>02</span><h3 data-i18n="mechanics.climbTitle">Climb</h3><p data-i18n="mechanics.climbBody">Grab ledges and surfaces to find your own route upward.</p></article>
+          <article class="mechanic-card reveal"><div class="atlas-icon atlas-smash" role="img" aria-label="Smashing a wall" data-i18n-aria="mechanics.breakAlt"></div><span>03</span><h3 data-i18n="mechanics.breakTitle">Break</h3><p data-i18n="mechanics.breakBody">Strike, tear, and throw pieces with convincing physical weight.</p></article>
+          <article class="mechanic-card reveal"><div class="atlas-icon atlas-collapse" role="img" aria-label="A building collapsing" data-i18n-aria="mechanics.toppleAlt"></div><span>04</span><h3 data-i18n="mechanics.toppleTitle">Topple</h3><p data-i18n="mechanics.toppleBody">Turn one smart hit into a spectacular chain reaction.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quest" id="quest">
+      <div class="quest-art" data-depth="0.06"></div><div class="quest-shade"></div>
+      <div class="section-inner quest-layout">
+        <div class="quest-copy"><p class="eyebrow reveal" data-i18n="quest.eyebrow">Built for standalone VR</p><h2 class="display reveal" data-i18n-html="quest.title">Big impact.<br /><em>No cable.</em></h2><p class="reveal" data-i18n="quest.body">Rumblekin VR is being shaped around Meta Quest: clear interactions, comfort options, tactile feedback, and a destruction budget designed for standalone hardware.</p></div>
+        <dl class="quest-specs reveal">
+          <div><dt data-i18n="quest.platformLabel">Platform</dt><dd data-i18n="quest.platformValue">Meta Quest</dd></div>
+          <div><dt data-i18n="quest.modeLabel">Mode</dt><dd data-i18n="quest.modeValue">Single-player</dd></div>
+          <div><dt data-i18n="quest.inputLabel">Input</dt><dd data-i18n="quest.inputValue">Tracked controllers</dd></div>
+          <div><dt data-i18n="quest.statusLabel">Status</dt><dd data-i18n="quest.statusValue">In development</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="section-inner final-card">
+        <p class="eyebrow reveal" data-i18n="final.eyebrow">Leaf &amp; Light Studio presents</p>
+        <h2 class="display reveal" data-i18n-html="final.title">The city is still intact.<br /><em>For now.</em></h2>
+        <div class="final-links reveal"><a class="button button-dark" href="https://leaflight.com.br/" data-i18n="final.studio">Visit the studio</a><a class="text-link" href="privacy/" data-language-link data-i18n="final.privacy">Read the privacy policy</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="wordmark footer-wordmark" href="#top" aria-label="Rumblekin VR home" data-i18n-aria="common.homeAria"><img src="assets/images/rumblekin-logo-v1.webp" width="2048" height="768" alt="Rumblekin VR" loading="lazy" /></a>
+    <p data-i18n="footer.rights">© 2026 Leaf &amp; Light Studio. All rights reserved.</p>
+    <div><a href="privacy/" data-language-link data-i18n="footer.privacy">Privacy</a><a href="mailto:leafandlightcontac@gmail.com" data-i18n="footer.contact">Contact</a></div>
+    <small data-i18n="footer.disclaimer">Rumblekin VR is in development. Artwork and features shown are subject to change. Meta Quest is a trademark of Meta Platforms, Inc.</small>
+  </footer>
+</body>
+</html>
