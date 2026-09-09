@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="18" fill="#071b1c"/>
-  <path d="M17 49V15h18c9 0 15 5 15 13 0 6-3 10-8 12l9 9H39l-8-8h-3v8H17Zm11-18h7c3 0 5-1 5-4s-2-4-5-4h-7v8Z" fill="#c5f13b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">I'm Monster</title>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="#071b1c" stroke="#c8f638" stroke-width="3"/>
+  <path d="M15 48V23h8l9 13 9-13h8v25h-9V37l-8 10-8-10v11Z" fill="#fff1d2"/>
+  <path d="m27 19 1-10 6-4 4 12-5 7Z" fill="#c8f638"/>
+  <path d="m28 9 6-4-1 19Z" fill="#e4ff81"/>
 </svg>

@@ -1,10 +1,11 @@
 (() => {
-  const i18n = window.RUMBLEKIN_I18N;
-  const storageKey = "rumblekin-language";
+  const i18n = window.IM_MONSTER_I18N;
+  const storageKey = "im-monster-language";
 
   const getStoredLanguage = () => {
     try {
-      return window.localStorage.getItem(storageKey);
+      return window.localStorage.getItem(storageKey)
+        || window.localStorage.getItem("rumblekin-language"); // Previous site's preference.
     } catch {
       return null;
     }
