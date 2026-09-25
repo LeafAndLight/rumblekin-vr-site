@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#1C0E26" />
   <meta name="description" content="I'm Monster is an in-development Meta Quest VR game with arm-driven movement, palm-born grappling, tracked-hand powers, and authored structural destruction." />
   <meta property="og:title" content="I'm Monster — A city built for big impact" />
-  <meta property="og:description" content="Explore the illustrated city, then learn how arm-driven movement, hook powers, and authored building collapses shape I'm Monster." />
+  <meta property="og:description" content="Meet the powers, hand-driven movement, and reactive city destruction in I'm Monster, an in-development VR game for Meta Quest." />
   <meta property="og:image" content="assets/images/im-monster-city-scene-v1.png" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="I'm Monster" />
@@ -21,9 +21,9 @@
   <meta name="twitter:image:alt" content="Illustrated city environment concept art — not captured gameplay" />
   <title>I'm Monster — A city built for big impact</title>
   <link rel="icon" href="assets/images/im-monster-icon-v3.png" type="image/png" sizes="512x512" />
-  <link rel="stylesheet" href="assets/styles.css?v=im-monster-v4" />
-  <script src="assets/translations.js?v=im-monster-v4" defer></script>
-  <script src="assets/script.js?v=im-monster-v4" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=im-monster-v5" />
+  <script src="assets/translations.js?v=im-monster-v5" defer></script>
+  <script src="assets/script.js?v=im-monster-v5" defer></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#game" data-i18n="common.skip">Skip to content</a>
@@ -66,7 +66,7 @@
         <h1 class="display reveal" id="hero-title" data-i18n-html="hero.title">A city built<br /><em>for big impact.</em></h1>
         <p class="hero-copy reveal" data-i18n="hero.copy">Move with your arms. Reach, hook, and pull; find the supports that make the city give way.</p>
         <div class="hero-actions reveal">
-          <a class="button button-primary" href="#city-demo"><span data-i18n="hero.ctaGame">Explore the city</span> <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" href="#mechanics"><span data-i18n="hero.ctaGame">Explore the city</span> <span aria-hidden="true">↓</span></a>
           <a class="button button-ghost" href="privacy/" data-language-link data-i18n="hero.ctaPrivacy">Privacy policy</a>
         </div>
       </div>
@@ -129,47 +129,20 @@
       </div>
     </section>
 
-    <section class="section city-demo" id="city-demo" aria-labelledby="demo-title">
-      <div class="section-inner">
-        <div class="demo-heading">
-          <div><p class="eyebrow reveal" data-i18n="demo.eyebrow">City atlas</p><h2 class="display reveal" id="demo-title" data-i18n-html="demo.title">Look around the<br /><em>neighborhood.</em></h2></div>
-          <p class="demo-intro reveal" data-i18n="demo.body">A closer look at the city setting. Drag the illustration to pan, then zoom into the rooftops and streets.</p>
-        </div>
-
-        <div class="demo-board reveal">
-          <div class="demo-topline"><span data-i18n="demo.live">Illustrated city map</span><span class="demo-concept" data-i18n="demo.disclaimer">City environment concept art · not captured gameplay</span></div>
-          <div class="demo-map-wrap">
-            <div class="city-viewer" data-city-viewer role="region" aria-label="Illustrated city map. Drag to pan, scroll to zoom, or use arrow keys." data-i18n-aria="demo.mapAria" tabindex="0">
-              <div class="city-map-world" data-city-world><img src="assets/images/im-monster-city-scene-v1.png" width="1672" height="941" alt="Illustrated city environment concept art" data-i18n-alt="hero.alt" draggable="false" /></div>
-              <span class="map-viewport-badge" aria-hidden="true">CITY / 01</span>
-            </div>
-          </div>
-          <div class="demo-hud">
-            <p class="demo-instructions" data-i18n="demo.instructions">Click and drag to move around. Use the mouse wheel to zoom; arrow keys pan and Home resets the view.</p>
-            <div class="demo-controls" role="group" aria-label="Map view controls">
-              <button type="button" data-city-zoom-out aria-label="Zoom out" data-i18n-aria="demo.zoomOut"><span aria-hidden="true">−</span></button>
-              <button type="button" data-city-zoom-in aria-label="Zoom in" data-i18n-aria="demo.zoomIn"><span aria-hidden="true">+</span></button>
-              <button class="demo-reset" type="button" data-city-reset data-i18n="demo.reset">Reset view</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="demo-watch reveal"><p class="eyebrow" data-i18n="demo.watchEyebrow">Inside the Unity prototype</p><p data-i18n="demo.watchBody">The prototype has arm-driven movement, a three-slot power loadout, palm-born hook tendrils, hand-synced power effects, wrist interfaces, and buildings with authored support and collapse stages. This city image is concept art, not captured gameplay.</p></div>
-      </div>
-    </section>
-
-    <section class="section mechanics">
+    <section class="section mechanics" id="mechanics" aria-labelledby="mechanics-title">
       <div class="section-inner">
         <div class="mechanics-heading">
-          <div><p class="eyebrow reveal" data-i18n="mechanics.eyebrow">Hands, powers, city</p><h2 class="display reveal" data-i18n-html="mechanics.title">Every move<br /><em>has a response.</em></h2></div>
-          <p class="reveal" data-i18n="mechanics.body">The prototype pairs arm-driven movement with tracked hands, a wrist loadout, and authored building support and collapse stages. Effects answer the action that actually committed.</p>
+          <div><p class="eyebrow reveal" data-i18n="mechanics.eyebrow">Hands-on chaos</p><h2 class="display reveal" id="mechanics-title" data-i18n-html="mechanics.title">Your hands<br /><em>set it off.</em></h2></div>
+          <p class="reveal" data-i18n="mechanics.body">Choose an ability from the wrist interface. Aim either tracked hand and use its assigned trigger; movement stays arm-driven, with Grab &amp; Hook for latching and pulling.</p>
         </div>
-        <div class="mechanic-grid">
-          <article class="mechanic-card reveal"><div class="atlas-icon"><img src="assets/images/ui-icon-jump.png" width="512" height="512" loading="lazy" alt="" /></div><span>01</span><h3 data-i18n="mechanics.runTitle">Move with your arms</h3><p data-i18n="mechanics.runBody">Active can equip Grab &amp; Hook, Super Jump, or Quick Roll.</p></article>
-          <article class="mechanic-card reveal"><div class="atlas-icon"><img src="assets/images/ui-icon-hook.png" width="512" height="512" loading="lazy" alt="" /></div><span>02</span><h3 data-i18n="mechanics.climbTitle">Grab &amp; Hook</h3><p data-i18n="mechanics.climbBody">Palm-born tendrils reach a surface; hold to pull, release to let go.</p></article>
-          <article class="mechanic-card reveal"><div class="atlas-icon"><img src="assets/images/ui-icon-punch.png" width="512" height="512" loading="lazy" alt="" /></div><span>03</span><h3 data-i18n="mechanics.breakTitle">Equip a power</h3><p data-i18n="mechanics.breakBody">Primary and Secondary each have a fixed button and tracked hand.</p></article>
-          <article class="mechanic-card reveal"><div class="atlas-icon"><img src="assets/images/ui-icon-building.png" width="512" height="512" loading="lazy" alt="" /></div><span>04</span><h3 data-i18n="mechanics.toppleTitle">Read the structure</h3><p data-i18n="mechanics.toppleBody">Authored supports guide damage, staged collapse, and the final ruin.</p></article>
+        <div class="power-grid">
+          <article class="power-card reveal"><span class="power-index">01</span><div class="power-glyph"><img src="assets/images/ui-icon-punch.png" width="512" height="512" loading="lazy" alt="" /></div><h3 data-i18n="mechanics.punchTitle">Super Punch</h3><p data-i18n="mechanics.punchBody">Release a short-range super punch around either hand. Regular punches remain available during cooldown.</p></article>
+          <article class="power-card reveal"><span class="power-index">02</span><div class="power-glyph"><img src="assets/images/ui-icon-jump.png" width="512" height="512" loading="lazy" alt="" /></div><h3 data-i18n="mechanics.jumpTitle">Super Jump</h3><p data-i18n="mechanics.jumpBody">Launch from nearby ground or a firm handhold. Find fresh support before jumping again.</p></article>
+          <article class="power-card reveal"><span class="power-index">03</span><div class="power-glyph" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><path d="M76 43a31 31 0 0 0-53-16l-6 8m0-17v17h17M24 59a31 31 0 0 0 53 16l6-8m0 17V67H66" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 66c4-10 7-18 9-29 1-5 8-5 9 1l1 9 5-4c4-3 9 1 7 5l-5 10c-3 6-8 10-15 11l-11-1Z" fill="var(--gold)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></div><h3 data-i18n="mechanics.rollTitle">Quick Roll</h3><p data-i18n="mechanics.rollBody">Trigger a quick automatic burst of movement. Hand attacks stay available.</p></article>
+          <article class="power-card reveal"><span class="power-index">04</span><div class="power-glyph power-glyph-fire" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><path d="M51 9c8 17-4 22-3 34 0 5 3 9 8 11 4-10 5-18 1-25 17 11 27 25 26 41-1 17-14 28-33 28-20 0-34-13-34-31 0-14 6-25 20-37-1 12 2 19 9 23 0-15 2-30 6-44Z" fill="currentColor" stroke="var(--cream)" stroke-width="3" stroke-linejoin="round"/><path d="M51 53c5 8 9 12 8 19-1 7-6 11-13 11-7 0-12-5-12-12 0-5 3-10 9-15 0 5 2 8 4 9 1-4 2-8 4-12Z" fill="var(--gold)"/></svg></div><h3 data-i18n="mechanics.fireballTitle">Fireball</h3><p data-i18n="mechanics.fireballBody">At Form 3, aim a tracked hand and launch an explosive fireball.</p></article>
+          <article class="power-card reveal"><span class="power-index">05</span><div class="power-glyph power-glyph-wave" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="8" fill="var(--gold)"/><path d="M36 36a20 20 0 0 0 0 28m28 0a20 20 0 0 0 0-28M25 25a35 35 0 0 0 0 50m50 0a35 35 0 0 0 0-50M13 14a50 50 0 0 0 0 72m74 0a50 50 0 0 0 0-72" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></div><h3 data-i18n="mechanics.shockwaveTitle">Shockwave</h3><p data-i18n="mechanics.shockwaveBody">Point either hand and release a full-power shockwave.</p></article>
         </div>
+        <aside class="hook-feature reveal"><div class="hook-glyph"><img src="assets/images/ui-icon-hook.png" width="512" height="512" loading="lazy" alt="" /></div><div class="hook-copy"><p class="eyebrow" data-i18n="mechanics.hookLabel">Movement tool</p><h3 data-i18n="mechanics.hookTitle">Grab &amp; Hook</h3><p data-i18n="mechanics.hookBody">A tendril launches from the palm and latches onto a surface. Hold to pull; release to let go.</p></div></aside>
       </div>
     </section>
 
