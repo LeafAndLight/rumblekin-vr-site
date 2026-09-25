@@ -134,6 +134,227 @@
     });
   }
 
+  const initializeCityDemo = () => {
+    const map = document.querySelector(".demo-map");
+    const player = document.querySelector("#demo-player");
+    if (!map || !player) return;
+
+    const blocks = [...map.querySelectorAll("[data-building]")];
+    const people = [...map.querySelectorAll("[data-person]")];
+    const stats = {
+      buildings: document.querySelector("#demo-building-count"),
+      people: document.querySelector("#demo-people-count"),
+      status: document.querySelector("#demo-status"),
+    };
+    const ring = map.querySelector(".demo-target-ring");
+    const wave = map.querySelector("#demo-wave");
+    const start = { x: 280, y: 265 };
+    const buildingPoints = new Map([
+      ["1", [132, 91]], ["2", [438, 91]], ["3", [742, 99]], ["4", [128, 272]],
+      ["5", [434, 273]], ["6", [740, 275]], ["7", [212, 431]], ["8", [764, 431]],
+    ]);
+    const personStarts = people.map((person) => {
+      const match = person.getAttribute("transform").match(/translate\(([-\d.]+)\s+([-\d.]+)\)/);
+      return { x: Number(match?.[1] || 0), y: Number(match?.[2] || 0) };
+    });
+    const buildingHits = new Map(blocks.map((block) => [block.dataset.building, 0]));
+    let selected = null;
+    let activePower = null;
+    let playerPosition = { ...start };
+    let dragging = false;
+
+    const text = (key) => {
+      const language = document.body.dataset.language || i18n?.defaultLanguage || "en";
+      return i18n?.languages?.[language]?.messages?.[key] || i18n?.languages?.en?.messages?.[key] || key;
+    };
+    const message = (key, values = {}) => Object.entries(values).reduce(
+      (result, [name, value]) => result.replaceAll(`{${name}}`, String(value)), text(key),
+    );
+    const setStatus = (key, values) => {
+      if (stats.status) stats.status.textContent = message(key, values);
+    };
+    const localPoint = (event) => {
+      const matrix = map.getScreenCTM();
+      if (!matrix) return null;
+      const point = map.createSVGPoint();
+      point.x = event.clientX;
+      point.y = event.clientY;
+      const local = point.matrixTransform(matrix.inverse());
+      return {
+        x: Math.max(28, Math.min(872, local.x)),
+        y: Math.max(28, Math.min(492, local.y)),
+      };
+    };
+    const movePlayer = (position) => {
+      playerPosition = position;
+      player.setAttribute("transform", `translate(${position.x} ${position.y})`);
+    };
+    const updateCounts = () => {
+      const standing = blocks.filter((block) => !block.classList.contains("destroyed")).length;
+      if (stats.buildings) stats.buildings.textContent = `${standing} / ${blocks.length}`;
+      if (stats.people) stats.people.textContent = String(people.length);
+    };
+    const clearActivePower = () => {
+      activePower = null;
+      document.querySelectorAll("[data-power]").forEach((button) => button.setAttribute("aria-pressed", "false"));
+    };
+    const selectBlock = (block) => {
+      selected = block;
+      blocks.forEach((item) => item.classList.toggle("selected", item === block));
+      const center = buildingPoints.get(block.dataset.building);
+      if (ring && center) {
+        ring.style.display = "block";
+        ring.setAttribute("transform", `translate(${center[0]} ${center[1]})`);
+      }
+    };
+    const fleePeople = (center, radius) => {
+      people.forEach((person, index) => {
+        const base = personStarts[index];
+        const dx = base.x - center.x;
+        const dy = base.y - center.y;
+        const distance = Math.hypot(dx, dy);
+        if (distance > radius) return;
+        const direction = distance < 1 ? { x: 1, y: 0 } : { x: dx / distance, y: dy / distance };
+        const x = Math.max(22, Math.min(878, base.x + direction.x * 98));
+        const y = Math.max(22, Math.min(498, base.y + direction.y * 82));
+        person.setAttribute("transform", `translate(${x} ${y})`);
+      });
+    };
+    const damageBlock = (block, amount, power) => {
+      if (!block || block.classList.contains("destroyed")) return false;
+      const id = block.dataset.building;
+      const hits = (buildingHits.get(id) || 0) + amount;
+      buildingHits.set(id, hits);
+      const remaining = Math.max(0, 3 - hits);
+      block.classList.add("hit");
+      window.setTimeout(() => block.classList.remove("hit"), 360);
+      if (remaining === 0) {
+        block.classList.add("destroyed");
+        fleePeople(buildingPoints.get(id), 155);
+        setStatus("demo.statusDestroyed", { building: id });
+      } else {
+        setStatus("demo.statusHit", { building: id, power: text(`demo.${power}`), remaining });
+      }
+      updateCounts();
+      return true;
+    };
+    const usePower = (power) => {
+      if (power === "shockwave") {
+        const origin = { ...playerPosition };
+        let hitCount = 0;
+        if (wave) {
+          wave.setAttribute("transform", `translate(${origin.x} ${origin.y})`);
+          wave.classList.remove("active");
+          void wave.getBoundingClientRect();
+          wave.classList.add("active");
+        }
+        blocks.forEach((block) => {
+          const center = buildingPoints.get(block.dataset.building);
+          if (Math.hypot(center[0] - origin.x, center[1] - origin.y) <= 175 && damageBlock(block, 1, power)) hitCount += 1;
+        });
+        fleePeople(origin, 190);
+        clearActivePower();
+        setStatus(hitCount ? "demo.statusShockwave" : "demo.statusEmpty", { count: hitCount });
+        return;
+      }
+      if (!selected || selected.classList.contains("destroyed")) {
+        setStatus("demo.statusNoTarget");
+        return;
+      }
+      damageBlock(selected, power === "fireball" ? 2 : 1, power);
+      clearActivePower();
+    };
+
+    blocks.forEach((block) => {
+      block.addEventListener("pointerdown", (event) => event.stopPropagation());
+      block.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (block.classList.contains("destroyed")) {
+          setStatus("demo.statusNoTarget");
+          return;
+        }
+        selectBlock(block);
+        if (activePower) usePower(activePower);
+        else setStatus("demo.statusTarget", { building: block.dataset.building });
+      });
+      block.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        block.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      });
+    });
+
+    map.addEventListener("pointerdown", (event) => {
+      if (event.target.closest("[data-building], #demo-player")) return;
+      const point = localPoint(event);
+      if (point) movePlayer(point);
+    });
+    player.addEventListener("pointerdown", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      dragging = true;
+      player.classList.add("dragging");
+      player.setPointerCapture(event.pointerId);
+    });
+    player.addEventListener("pointermove", (event) => {
+      if (!dragging) return;
+      const point = localPoint(event);
+      if (point) movePlayer(point);
+    });
+    const stopDragging = (event) => {
+      dragging = false;
+      player.classList.remove("dragging");
+      if (player.hasPointerCapture(event.pointerId)) player.releasePointerCapture(event.pointerId);
+    };
+    player.addEventListener("pointerup", stopDragging);
+    player.addEventListener("pointercancel", stopDragging);
+    map.addEventListener("keydown", (event) => {
+      const delta = { ArrowLeft: [-24, 0], ArrowRight: [24, 0], ArrowUp: [0, -24], ArrowDown: [0, 24] }[event.key];
+      if (!delta) return;
+      event.preventDefault();
+      movePlayer({ x: Math.max(28, Math.min(872, playerPosition.x + delta[0])), y: Math.max(28, Math.min(492, playerPosition.y + delta[1])) });
+    });
+
+    document.querySelectorAll("[data-power]").forEach((button) => {
+      button.setAttribute("aria-pressed", "false");
+      button.addEventListener("click", () => {
+        const power = button.dataset.power;
+        clearActivePower();
+        button.setAttribute("aria-pressed", "true");
+        if (power === "shockwave") {
+          usePower(power);
+          return;
+        }
+        activePower = power;
+        if (selected && !selected.classList.contains("destroyed")) usePower(power);
+        else setStatus("demo.statusNoTarget");
+      });
+    });
+
+    document.querySelector(".demo-reset")?.addEventListener("click", () => {
+      blocks.forEach((block) => {
+        block.classList.remove("destroyed", "selected", "hit");
+        buildingHits.set(block.dataset.building, 0);
+      });
+      people.forEach((person, index) => {
+        const point = personStarts[index];
+        person.setAttribute("transform", `translate(${point.x} ${point.y})`);
+      });
+      selected = null;
+      if (ring) ring.style.display = "none";
+      if (wave) wave.classList.remove("active");
+      clearActivePower();
+      movePlayer({ ...start });
+      updateCounts();
+      setStatus("demo.statusReset");
+    });
+
+    updateCounts();
+    setStatus("demo.statusReady");
+  };
+
+  initializeCityDemo();
+
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
   const header = document.querySelector("[data-header]");
