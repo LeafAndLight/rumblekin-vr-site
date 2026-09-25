@@ -4,33 +4,33 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1C0E26" />
-  <meta name="description" content="I'm Monster is an in-development physics destruction game for Meta Quest, built around arm-driven movement, equipped powers, and a reactive city." />
-  <meta property="og:title" content="I'm Monster — The city is your playground" />
-  <meta property="og:description" content="Move with your arms, hook into targets, and bring down city blocks by finding what holds them up." />
-  <meta property="og:image" content="assets/images/og-im-monster-v3.jpg" />
+  <meta name="description" content="I'm Monster is an in-development Meta Quest VR game with arm-driven movement, palm-born grappling, tracked-hand powers, and authored structural destruction." />
+  <meta property="og:title" content="I'm Monster — A city built for big impact" />
+  <meta property="og:description" content="Explore the illustrated city, then learn how arm-driven movement, hook powers, and authored building collapses shape I'm Monster." />
+  <meta property="og:image" content="assets/images/im-monster-city-scene-v1.png" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="I'm Monster" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:alt" content="I'm Monster character concept art in a stylized city — not captured gameplay" />
+  <meta property="og:image:width" content="1672" />
+  <meta property="og:image:height" content="941" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Illustrated city environment concept art — not captured gameplay" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="I'm Monster — The city is your playground" />
   <meta name="twitter:description" content="Move with your arms, hook into targets, and bring down city blocks by finding what holds them up." />
-  <meta name="twitter:image" content="assets/images/og-im-monster-v3.jpg" />
-  <meta name="twitter:image:alt" content="I'm Monster character concept art in a stylized city — not captured gameplay" />
-  <title>I'm Monster — The city is your playground</title>
+  <meta name="twitter:image" content="assets/images/im-monster-city-scene-v1.png" />
+  <meta name="twitter:image:alt" content="Illustrated city environment concept art — not captured gameplay" />
+  <title>I'm Monster — A city built for big impact</title>
   <link rel="icon" href="assets/images/im-monster-icon-v3.png" type="image/png" sizes="512x512" />
-  <link rel="stylesheet" href="assets/styles.css?v=im-monster-v3" />
-  <script src="assets/translations.js?v=im-monster-v3" defer></script>
-  <script src="assets/script.js?v=im-monster-v3" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=im-monster-v4" />
+  <script src="assets/translations.js?v=im-monster-v4" defer></script>
+  <script src="assets/script.js?v=im-monster-v4" defer></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#game" data-i18n="common.skip">Skip to content</a>
 
   <header class="site-header" data-header>
     <a class="wordmark" href="#top" aria-label="I'm Monster home" data-i18n-aria="common.homeAria">
-      <img src="assets/images/im-monster-logo-v3.webp" width="1440" height="434" alt="I'm Monster" />
+      <img src="assets/images/im-monster-wordmark-one-line.png" width="4101" height="838" alt="I'm Monster" />
     </a>
     <nav aria-label="Main navigation" data-i18n-aria="nav.aria">
       <a href="#game" data-i18n="nav.game">The game</a>
@@ -55,23 +55,25 @@
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" data-depth="0.055">
-        <picture><img src="assets/images/im-monster-hero-v3.webp" width="1920" height="1080" fetchpriority="high" alt="Purple monster player-character concept art in a stylized city" data-i18n-alt="hero.alt" /></picture>
+      <div class="hero-media" data-depth="0.04">
+        <picture><img src="assets/images/im-monster-city-scene-v1.png" width="1672" height="941" fetchpriority="high" alt="Illustrated city environment concept art" data-i18n-alt="hero.alt" /></picture>
       </div>
       <div class="hero-wash"></div>
+      <div class="hero-debris" data-depth="0.12" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <div class="hero-content">
         <p class="kicker reveal"><span></span><b data-i18n="hero.kicker">In development for Meta Quest</b></p>
-        <h1 class="display reveal" id="hero-title" data-i18n-html="hero.title">The city is your<br /><em>playground.</em></h1>
-        <p class="hero-copy reveal" data-i18n="hero.copy">Run with your arms, climb facades, rip loose anything that is anchored, and turn every impact into a chain reaction.</p>
+        <img class="hero-wordmark reveal" src="assets/images/im-monster-wordmark-one-line.png" width="4101" height="838" alt="I'm Monster" fetchpriority="high" />
+        <h1 class="display reveal" id="hero-title" data-i18n-html="hero.title">A city built<br /><em>for big impact.</em></h1>
+        <p class="hero-copy reveal" data-i18n="hero.copy">Move with your arms. Reach, hook, and pull; find the supports that make the city give way.</p>
         <div class="hero-actions reveal">
-          <a class="button button-primary" href="#city-demo"><span data-i18n="hero.ctaGame">Play the city demo</span> <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" href="#city-demo"><span data-i18n="hero.ctaGame">Explore the city</span> <span aria-hidden="true">↓</span></a>
           <a class="button button-ghost" href="privacy/" data-language-link data-i18n="hero.ctaPrivacy">Privacy policy</a>
         </div>
       </div>
       <div class="hero-meta" aria-label="Game features" data-i18n-aria="hero.featuresAria">
-        <span data-i18n="hero.meta1">VR first-person</span><span data-i18n="hero.meta2">Physics-based destruction</span><span data-i18n="hero.meta3">Single-player</span>
+        <span data-i18n="hero.meta1">Arm-driven movement</span><span data-i18n="hero.meta2">Reactive destruction</span><span data-i18n="hero.meta3">In development</span>
       </div>
-      <p class="concept-note" data-i18n="hero.note">Player character concept art · not a gameplay capture.</p>
+      <p class="concept-note" data-i18n="hero.note">City environment concept art · not captured gameplay.</p>
     </section>
 
     <div class="smash-strip" aria-hidden="true"><div data-i18n-html="strip.text">Run <i>✦</i> Climb <i>✦</i> Rip <i>✦</i> Throw <i>✦</i> Topple <i>✦</i> Grow <i>✦</i> Run <i>✦</i> Climb <i>✦</i> Rip <i>✦</i> Throw <i>✦</i> Topple <i>✦</i> Grow <i>✦</i></div></div>
@@ -116,8 +118,9 @@
     </section>
 
     <section class="section city" id="impact">
-      <div class="city-scene" aria-hidden="true"></div>
+      <div class="city-scene" data-depth="0.07" aria-hidden="true"></div>
       <div class="city-shade"></div>
+      <div class="city-fragments" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <div class="section-inner city-content">
         <p class="eyebrow reveal" data-i18n="city.eyebrow">The city is a system</p>
         <h2 class="display reveal" data-i18n-html="city.title">Find the<br /><em>weak point.</em></h2>
@@ -129,90 +132,43 @@
     <section class="section city-demo" id="city-demo" aria-labelledby="demo-title">
       <div class="section-inner">
         <div class="demo-heading">
-          <div>
-            <p class="eyebrow reveal" data-i18n="demo.eyebrow">A tiny city playground</p>
-            <h2 class="display reveal" id="demo-title" data-i18n-html="demo.title">Take the monster<br /><em>for a spin.</em></h2>
-          </div>
-          <p class="demo-intro reveal" data-i18n="demo.body">Move the monster around this hand-drawn city, pick a building, and try out a few powers. People run when the street shakes.</p>
+          <div><p class="eyebrow reveal" data-i18n="demo.eyebrow">City atlas</p><h2 class="display reveal" id="demo-title" data-i18n-html="demo.title">Look around the<br /><em>neighborhood.</em></h2></div>
+          <p class="demo-intro reveal" data-i18n="demo.body">A closer look at the city setting. Drag the illustration to pan, then zoom into the rooftops and streets.</p>
         </div>
 
         <div class="demo-board reveal">
-          <div class="demo-topline">
-            <span data-i18n="demo.live">Browser city toy</span>
-            <span class="demo-concept" data-i18n="demo.disclaimer">Illustrative web demo · separate from the Unity game</span>
-          </div>
+          <div class="demo-topline"><span data-i18n="demo.live">Illustrated city map</span><span class="demo-concept" data-i18n="demo.disclaimer">City environment concept art · not captured gameplay</span></div>
           <div class="demo-map-wrap">
-            <svg class="demo-map" viewBox="0 0 900 520" role="application" aria-label="Interactive illustrated city map" data-i18n-aria="demo.mapAria" tabindex="0">
-              <defs>
-                <pattern id="demo-grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#c6a0da" stroke-opacity=".09" stroke-width="1" /></pattern>
-                <filter id="demo-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              </defs>
-              <rect width="900" height="520" rx="24" fill="#21122e" />
-              <rect width="900" height="520" rx="24" fill="url(#demo-grid)" />
-              <path class="map-road-edge" d="M0 183H900M0 353H900M280 0V520M590 0V520" />
-              <path class="map-road" d="M0 183H900M0 353H900M280 0V520M590 0V520" />
-              <path class="map-road-mark" d="M0 183H900M0 353H900M280 0V520M590 0V520" />
-              <g class="demo-block" data-building="1" tabindex="0" role="button" aria-label="Building 1" data-i18n-aria="demo.building1Aria">
-                <rect class="block-shadow" x="44" y="36" width="176" height="111" rx="9"/><g class="tower-structure"><rect class="tower" x="50" y="42" width="164" height="99" rx="7"/><path class="tower-roof" d="M50 60h164M70 42v99m35-99v99m35-99v99m35-99v99"/><path class="tower-window" d="M62 73h8v12h-8zm35 0h8v12h-8zm35 0h8v12h-8zm35 0h8v12h-8zm-70 28h8v12h-8zm35 0h8v12h-8zm35 0h8v12h-8z"/></g><g class="rubble"><path d="m54 136 33-26 22 27 26-30 33 29 35-13 11 21H52zm8 13 26-17 21 19h-47zm81 0 26-21 30 21z"/></g><text x="59" y="34" class="building-label">01</text><rect class="building-hit" x="38" y="28" width="188" height="126" rx="10"/></g>
-              <g class="demo-block" data-building="2" tabindex="0" role="button" aria-label="Building 2" data-i18n-aria="demo.building2Aria">
-                <rect class="block-shadow" x="331" y="30" width="214" height="123" rx="9"/><g class="tower-structure"><rect class="tower tower-lilac" x="337" y="36" width="202" height="111" rx="7"/><path class="tower-roof" d="M337 56h202M357 36v111m42-111v111m42-111v111m42-111v111m42-111v111"/><path class="tower-window" d="M370 69h10v15h-10zm42 0h10v15h-10zm42 0h10v15h-10zm42 0h10v15h-10zm-84 36h10v15h-10zm42 0h10v15h-10zm42 0h10v15h-10z"/></g><g class="rubble"><path d="m341 141 35-22 27 26 26-33 36 29 33-17 35 27H339zm48 7 21-15 23 15zm96 0 28-19 31 19z"/></g><text x="348" y="28" class="building-label">02</text><rect class="building-hit" x="325" y="22" width="226" height="137" rx="10"/></g>
-              <g class="demo-block" data-building="3" tabindex="0" role="button" aria-label="Building 3" data-i18n-aria="demo.building3Aria">
-                <rect class="block-shadow" x="641" y="47" width="202" height="104" rx="9"/><g class="tower-structure"><rect class="tower tower-gold" x="647" y="53" width="190" height="92" rx="7"/><path class="tower-roof" d="M647 70h190M671 53v92m48-92v92m48-92v92m48-92v92"/><path class="tower-window" d="M680 82h12v13h-12zm48 0h12v13h-12zm48 0h12v13h-12zm-72 29h12v13h-12zm48 0h12v13h-12zm48 0h12v13h-12z"/></g><g class="rubble"><path d="m651 141 28-25 29 27 35-32 31 29 27-19 32 26H649zm113 7 25-17 26 17z"/></g><text x="658" y="45" class="building-label">03</text><rect class="building-hit" x="635" y="39" width="214" height="116" rx="10"/></g>
-              <g class="demo-block" data-building="4" tabindex="0" role="button" aria-label="Building 4" data-i18n-aria="demo.building4Aria">
-                <rect class="block-shadow" x="45" y="211" width="166" height="123" rx="9"/><g class="tower-structure"><rect class="tower tower-short" x="51" y="217" width="154" height="111" rx="7"/><path class="tower-roof" d="M51 237h154M76 217v111m51-111v111m51-111v111"/><path class="tower-window" d="M86 251h14v15H86zm51 0h14v15h-14zm-51 34h14v15H86zm51 0h14v15h-14z"/></g><g class="rubble"><path d="m55 326 33-27 22 30 27-29 28 27 30-14 10 20H53zm106 5 26-20 14 20z"/></g><text x="59" y="209" class="building-label">04</text><rect class="building-hit" x="39" y="203" width="178" height="139" rx="10"/></g>
-              <g class="demo-block" data-building="5" tabindex="0" role="button" aria-label="Building 5" data-i18n-aria="demo.building5Aria">
-                <rect class="block-shadow" x="337" y="208" width="194" height="130" rx="9"/><g class="tower-structure"><rect class="tower tower-lilac" x="343" y="214" width="182" height="118" rx="7"/><path class="tower-roof" d="M343 234h182M367 214v118m48-118v118m48-118v118m40-118v118"/><path class="tower-window" d="M377 247h11v15h-11zm48 0h11v15h-11zm48 0h11v15h-11zm-72 35h11v15h-11zm48 0h11v15h-11zm-48 31h11v15h-11zm48 0h11v15h-11z"/></g><g class="rubble"><path d="m347 330 30-25 28 27 30-33 33 30 24-18 33 24H345zm85 1 21-20 26 20z"/></g><text x="351" y="206" class="building-label">05</text><rect class="building-hit" x="331" y="200" width="206" height="146" rx="10"/></g>
-              <g class="demo-block" data-building="6" tabindex="0" role="button" aria-label="Building 6" data-i18n-aria="demo.building6Aria">
-                <rect class="block-shadow" x="648" y="212" width="184" height="126" rx="9"/><g class="tower-structure"><rect class="tower tower-gold" x="654" y="218" width="172" height="114" rx="7"/><path class="tower-roof" d="M654 238h172M682 218v114m57-114v114m57-114v114"/><path class="tower-window" d="M694 251h13v15h-13zm57 0h13v15h-13zm-57 35h13v15h-13zm57 0h13v15h-13zm-57 31h13v9h-13zm57 0h13v9h-13z"/></g><g class="rubble"><path d="m658 330 29-27 24 29 29-34 34 31 24-18 27 23H656zm82 1 23-20 27 20z"/></g><text x="662" y="210" class="building-label">06</text><rect class="building-hit" x="642" y="204" width="196" height="142" rx="10"/></g>
-              <g class="demo-block" data-building="7" tabindex="0" role="button" aria-label="Building 7" data-i18n-aria="demo.building7Aria">
-                <rect class="block-shadow" x="119" y="380" width="187" height="103" rx="9"/><g class="tower-structure"><rect class="tower tower-gold" x="125" y="386" width="175" height="91" rx="7"/><path class="tower-roof" d="M125 403h175M154 386v91m58-91v91m58-91v91"/><path class="tower-window" d="M166 416h15v13h-15zm58 0h15v13h-15zm-58 30h15v13h-15zm58 0h15v13h-15z"/></g><g class="rubble"><path d="m129 476 33-25 27 27 27-31 31 28 22-17 32 22H127zm89 1 21-17 29 17z"/></g><text x="133" y="378" class="building-label">07</text><rect class="building-hit" x="113" y="372" width="199" height="111" rx="10"/></g>
-              <g class="demo-block" data-building="8" tabindex="0" role="button" aria-label="Building 8" data-i18n-aria="demo.building8Aria">
-                <rect class="block-shadow" x="675" y="379" width="178" height="104" rx="9"/><g class="tower-structure"><rect class="tower tower-short" x="681" y="385" width="166" height="92" rx="7"/><path class="tower-roof" d="M681 402h166M709 385v92m55-92v92m55-92v92"/><path class="tower-window" d="M721 415h14v13h-14zm55 0h14v13h-14zm-55 30h14v13h-14zm55 0h14v13h-14z"/></g><g class="rubble"><path d="m685 476 31-24 25 26 28-30 28 27 25-17 28 20H683zm76 1 24-18 28 18z"/></g><text x="689" y="377" class="building-label">08</text><rect class="building-hit" x="669" y="371" width="190" height="112" rx="10"/></g>
-              <g class="demo-people" aria-hidden="true">
-                <g class="demo-person" data-person="0" transform="translate(255 229)"><circle r="8" fill="#b9ef42"/><circle cy="-3" r="3" fill="#321a45"/><path d="M-4 7v10m8-10v10" stroke="#b9ef42" stroke-width="3" stroke-linecap="round"/></g>
-                <g class="demo-person" data-person="1" transform="translate(617 275)"><circle r="8" fill="#f3b64e"/><circle cy="-3" r="3" fill="#321a45"/><path d="M-4 7v10m8-10v10" stroke="#f3b64e" stroke-width="3" stroke-linecap="round"/></g>
-                <g class="demo-person" data-person="2" transform="translate(522 421)"><circle r="8" fill="#c6a0da"/><circle cy="-3" r="3" fill="#321a45"/><path d="M-4 7v10m8-10v10" stroke="#c6a0da" stroke-width="3" stroke-linecap="round"/></g>
-                <g class="demo-person" data-person="3" transform="translate(307 120)"><circle r="8" fill="#e8762c"/><circle cy="-3" r="3" fill="#321a45"/><path d="M-4 7v10m8-10v10" stroke="#e8762c" stroke-width="3" stroke-linecap="round"/></g>
-                <g class="demo-person" data-person="4" transform="translate(612 432)"><circle r="8" fill="#b9ef42"/><circle cy="-3" r="3" fill="#321a45"/><path d="M-4 7v10m8-10v10" stroke="#b9ef42" stroke-width="3" stroke-linecap="round"/></g>
-              </g>
-              <g class="demo-target-ring" aria-hidden="true"><circle r="40"/><circle r="46"/></g>
-              <g class="demo-wave" id="demo-wave" aria-hidden="true"><circle r="56"/></g>
-              <g class="demo-player" id="demo-player" transform="translate(280 265)" tabindex="0" role="button" aria-label="Player character. Drag to move" data-i18n-aria="demo.playerAria" filter="url(#demo-glow)">
-                <circle class="player-shadow" cy="23" r="31"/><image href="assets/images/im-monster-player-token-v3.webp" x="-34" y="-39" width="68" height="77" preserveAspectRatio="xMidYMid meet"/><circle class="player-hit" r="35"/>
-              </g>
-            </svg>
+            <div class="city-viewer" data-city-viewer role="region" aria-label="Illustrated city map. Drag to pan, scroll to zoom, or use arrow keys." data-i18n-aria="demo.mapAria" tabindex="0">
+              <div class="city-map-world" data-city-world><img src="assets/images/im-monster-city-scene-v1.png" width="1672" height="941" alt="Illustrated city environment concept art" data-i18n-alt="hero.alt" draggable="false" /></div>
+              <span class="map-viewport-badge" aria-hidden="true">CITY / 01</span>
+            </div>
           </div>
           <div class="demo-hud">
-            <div class="demo-stats" aria-live="polite">
-              <div><span data-i18n="demo.buildings">Buildings standing</span><strong id="demo-building-count">8 / 8</strong></div>
-              <div><span data-i18n="demo.people">People in the street</span><strong id="demo-people-count">5</strong></div>
-              <p id="demo-status" role="status" data-i18n="demo.statusReady">Pick a power, then give the city a nudge.</p>
-            </div>
-            <div class="demo-controls" role="group" aria-label="Monster powers" data-i18n-aria="demo.controlsAria">
-              <button class="demo-power" type="button" data-power="hook"><span aria-hidden="true">↗</span><span data-i18n="demo.hook">Grab &amp; Hook</span></button>
-              <button class="demo-power" type="button" data-power="fireball"><span aria-hidden="true">✦</span><span data-i18n="demo.fireball">Fireball</span></button>
-              <button class="demo-power" type="button" data-power="shockwave"><span aria-hidden="true">◎</span><span data-i18n="demo.shockwave">Shockwave</span></button>
-              <button class="demo-reset" type="button" data-i18n="demo.reset">Reset city</button>
+            <p class="demo-instructions" data-i18n="demo.instructions">Click and drag to move around. Use the mouse wheel to zoom; arrow keys pan and Home resets the view.</p>
+            <div class="demo-controls" role="group" aria-label="Map view controls">
+              <button type="button" data-city-zoom-out aria-label="Zoom out" data-i18n-aria="demo.zoomOut"><span aria-hidden="true">−</span></button>
+              <button type="button" data-city-zoom-in aria-label="Zoom in" data-i18n-aria="demo.zoomIn"><span aria-hidden="true">+</span></button>
+              <button class="demo-reset" type="button" data-city-reset data-i18n="demo.reset">Reset view</button>
             </div>
           </div>
-          <p class="demo-instructions" data-i18n="demo.instructions">Click a building to target it. Drag the monster or click a street to move. The active power acts on the selected target.</p>
         </div>
 
-        <div class="demo-watch reveal"><p class="eyebrow" data-i18n="demo.watchEyebrow">Inside the Unity prototype</p><p data-i18n="demo.watchBody">The game’s current systems include a three-slot power loadout, arm-driven movement, destructible structures, missions, and wrist interfaces. They are still in development; this little map is a separate web illustration.</p></div>
+        <div class="demo-watch reveal"><p class="eyebrow" data-i18n="demo.watchEyebrow">Inside the Unity prototype</p><p data-i18n="demo.watchBody">The prototype has arm-driven movement, a three-slot power loadout, palm-born hook tendrils, hand-synced power effects, wrist interfaces, and buildings with authored support and collapse stages. This city image is concept art, not captured gameplay.</p></div>
       </div>
     </section>
 
     <section class="section mechanics">
       <div class="section-inner">
         <div class="mechanics-heading">
-          <div><p class="eyebrow reveal" data-i18n="mechanics.eyebrow">Your body is the controller</p><h2 class="display reveal" data-i18n-html="mechanics.title">Feel the city<br /><em>give way.</em></h2></div>
-          <p class="reveal" data-i18n="mechanics.body">Physical movement and readable feedback keep every action direct: push the ground to move, reach to climb, swing to strike, and use momentum to finish the job.</p>
+          <div><p class="eyebrow reveal" data-i18n="mechanics.eyebrow">Hands, powers, city</p><h2 class="display reveal" data-i18n-html="mechanics.title">Every move<br /><em>has a response.</em></h2></div>
+          <p class="reveal" data-i18n="mechanics.body">The prototype pairs arm-driven movement with tracked hands, a wrist loadout, and authored building support and collapse stages. Effects answer the action that actually committed.</p>
         </div>
         <div class="mechanic-grid">
-          <article class="mechanic-card reveal"><div class="atlas-icon atlas-run" role="img" aria-label="Arm-powered movement" data-i18n-aria="mechanics.runAlt"></div><span>01</span><h3 data-i18n="mechanics.runTitle">Propel</h3><p data-i18n="mechanics.runBody">Push and swing your arms to move through the world.</p></article>
-          <article class="mechanic-card reveal"><div class="atlas-icon atlas-climb" role="img" aria-label="Climbing a building" data-i18n-aria="mechanics.climbAlt"></div><span>02</span><h3 data-i18n="mechanics.climbTitle">Climb</h3><p data-i18n="mechanics.climbBody">Grab ledges and surfaces to find your own route upward.</p></article>
-          <article class="mechanic-card reveal"><div class="atlas-icon atlas-smash" role="img" aria-label="Smashing a wall" data-i18n-aria="mechanics.breakAlt"></div><span>03</span><h3 data-i18n="mechanics.breakTitle">Break</h3><p data-i18n="mechanics.breakBody">Strike, tear, and throw pieces with convincing physical weight.</p></article>
-          <article class="mechanic-card reveal"><div class="atlas-icon atlas-collapse" role="img" aria-label="A building collapsing" data-i18n-aria="mechanics.toppleAlt"></div><span>04</span><h3 data-i18n="mechanics.toppleTitle">Topple</h3><p data-i18n="mechanics.toppleBody">Turn one smart hit into a spectacular chain reaction.</p></article>
+          <article class="mechanic-card reveal"><div class="atlas-icon"><img src="assets/images/ui-icon-jump.png" width="512" height="512" loading="lazy" alt="" /></div><span>01</span><h3 data-i18n="mechanics.runTitle">Move with your arms</h3><p data-i18n="mechanics.runBody">Active can equip Grab &amp; Hook, Super Jump, or Quick Roll.</p></article>
+          <article class="mechanic-card reveal"><div class="atlas-icon"><img src="assets/images/ui-icon-hook.png" width="512" height="512" loading="lazy" alt="" /></div><span>02</span><h3 data-i18n="mechanics.climbTitle">Grab &amp; Hook</h3><p data-i18n="mechanics.climbBody">Palm-born tendrils reach a surface; hold to pull, release to let go.</p></article>
+          <article class="mechanic-card reveal"><div class="atlas-icon"><img src="assets/images/ui-icon-punch.png" width="512" height="512" loading="lazy" alt="" /></div><span>03</span><h3 data-i18n="mechanics.breakTitle">Equip a power</h3><p data-i18n="mechanics.breakBody">Primary and Secondary each have a fixed button and tracked hand.</p></article>
+          <article class="mechanic-card reveal"><div class="atlas-icon"><img src="assets/images/ui-icon-building.png" width="512" height="512" loading="lazy" alt="" /></div><span>04</span><h3 data-i18n="mechanics.toppleTitle">Read the structure</h3><p data-i18n="mechanics.toppleBody">Authored supports guide damage, staged collapse, and the final ruin.</p></article>
         </div>
       </div>
     </section>
@@ -220,7 +176,7 @@
     <section class="section quest" id="quest">
       <div class="quest-art" data-depth="0.06"></div><div class="quest-shade"></div>
       <div class="section-inner quest-layout">
-        <div class="quest-copy"><p class="eyebrow reveal" data-i18n="quest.eyebrow">Built for standalone VR</p><h2 class="display reveal" data-i18n-html="quest.title">Big impact.<br /><em>No cable.</em></h2><p class="reveal" data-i18n="quest.body">I'm Monster is being shaped around Meta Quest: clear interactions, comfort options, tactile feedback, and a destruction budget designed for standalone hardware.</p></div>
+        <div class="quest-copy"><p class="eyebrow reveal" data-i18n="quest.eyebrow">Built for standalone VR</p><h2 class="display reveal" data-i18n-html="quest.title">Big impact.<br /><em>No cable.</em></h2><p class="reveal" data-i18n="quest.body">I'm Monster is being shaped around Meta Quest and its standalone limits. Comfort and performance still need to be confirmed on the headset.</p></div>
         <dl class="quest-specs reveal">
           <div><dt data-i18n="quest.platformLabel">Platform</dt><dd data-i18n="quest.platformValue">Meta Quest</dd></div>
           <div><dt data-i18n="quest.modeLabel">Mode</dt><dd data-i18n="quest.modeValue">Single-player</dd></div>
@@ -240,7 +196,7 @@
   </main>
 
   <footer>
-    <a class="wordmark footer-wordmark" href="#top" aria-label="I'm Monster home" data-i18n-aria="common.homeAria"><img src="assets/images/im-monster-logo-v3.webp" width="1440" height="434" alt="I'm Monster" loading="lazy" /></a>
+    <a class="wordmark footer-wordmark" href="#top" aria-label="I'm Monster home" data-i18n-aria="common.homeAria"><img src="assets/images/im-monster-wordmark-one-line.png" width="4101" height="838" alt="I'm Monster" loading="lazy" /></a>
     <p data-i18n="footer.rights">© 2026 Leaf &amp; Light Studio. All rights reserved.</p>
     <div><a href="privacy/" data-language-link data-i18n="footer.privacy">Privacy</a><a href="mailto:leafandlightcontac@gmail.com" data-i18n="footer.contact">Contact</a></div>
     <small data-i18n="footer.disclaimer">I'm Monster is in development. Artwork and features shown are subject to change. Meta Quest is a trademark of Meta Platforms, Inc.</small>
